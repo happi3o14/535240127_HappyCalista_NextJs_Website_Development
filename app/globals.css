@@ -1,4 +1,6 @@
 :root {
+  --bs-primary: #fc7f03;
+  --bs-primary-rgb: 252, 127, 3;
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -35,8 +37,56 @@ a {
   text-decoration: none;
 }
 
+.service-card {
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  background-color: #ff8c00;
+  color: #ffffff !important;
+  transform: translateY(-4px);
+}
+
+.service-card:hover .icon-wrapper {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.service-card:hover .icon-wrapper i {
+  color: #ffffff !important;
+}
+
+.service-card .icon-wrapper i {
+  transition: color 0.3s ease;
+}
+
+.service-card .icon-wrapper {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-card:hover .card-title,
+.service-card:hover .card-text {
+  color: #ffffff !important;
+}
+
+.form-control:focus {
+  border-color: #ffa447 !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 164, 71, 0.25) !important;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+.btn-primary {
+  background-color: #fc7f03 !important;
+  border-color: #fc7f03 !important;
+}
+
+.btn-primary:hover {
+  background-color: #db6f04 !important;
+  border-color: #db6f04 !important;
 }
