@@ -7,13 +7,14 @@ export default function Navigation() {
   return (
     <Navbar expand="lg" bg="white" className="shadow-sm py-3">
       <Container>
-        <Navbar.Brand href="/" className="fw-bold text-primary fs-3">
-          HeHeTour
+        <Navbar.Brand href="/" className="fw-bold fs-3">
+          <span className="text-orange">HeHe</span>
+          <span className="text-cyan">Tour</span>
         </Navbar.Brand>
 
         <Navbar.Toggle />
         <Navbar.Collapse>
-          <Nav className="ms-auto gap-3 align-items-lg-center">
+          <Nav className="ms-auto gap-3 align-items-lg-center text-center">
             <Link href="/" passHref className="nav-link fw-semibold">
               Home
             </Link>
