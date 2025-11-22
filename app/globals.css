@@ -124,6 +124,56 @@ a {
   animation: runSwipe 0.5s ease-out forwards;
 }
 
+.card-image-wrapper {
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+
+.tour-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-image-wrapper:hover .tour-image {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 77, 92, 0.6);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.card-image-wrapper:hover .image-overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.35s ease;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-align: justify;
+}
+
+.card-image-wrapper:hover .overlay-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.par-wrapper {
+  text-align: justify;
+}
+
 @keyframes runSwipe {
   0% {
     left: -180px;

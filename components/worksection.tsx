@@ -10,6 +10,7 @@ const tours = [
     price: "2.499.000",
     originalPrice: "3.200.000",
     promo: "22% OFF",
+    detail: "Liburan santai di pulau tropis dengan pantai indah, budaya unik, dan spot foto ikonik. Cocok untuk perjalanan rileks sekaligus penuh pengalaman menarik",
   },
   {
     title: "Japan Autumn Tour",
@@ -18,6 +19,7 @@ const tours = [
     price: "12.900.000",
     originalPrice: "15.000.000",
     promo: "14% OFF",
+    detail: "Kunjungi Tokyo, Kyoto, dan Osaka dalam satu perjalanan lengkap—dari kuil bersejarah, kuliner autentik, hingga spot foto terbaik di musim momiji",
   },
   {
     title: "Singapore Getaway",
@@ -26,6 +28,7 @@ const tours = [
     price: "4.299.000",
     originalPrice: "5.000.000",
     promo: "15% OFF",
+    detail: "Nikmati ikon Marina Bay, belanja di Orchard Road, wisata keluarga di Sentosa, hingga kuliner lokal kelas dunia. Pilihan ideal untuk liburan singkat namun tetap seru dan berkesan",
   },
 ];
 
@@ -58,11 +61,19 @@ export default function WorkSection() {
               </div>
 
               <Card className="h-100 shadow-sm border-0 rounded-3 overflow-hidden tour-card">
-                <Card.Img
-                  variant="top"
-                  src={item.image}
-                  style={{ height: "240px", objectFit: "cover" }}
-                />
+                <div className="card-image-wrapper position-relative">
+                  <Card.Img
+                    variant="top"
+                    src={item.image}
+                    className="tour-image"
+                  />
+
+                  <div className="image-overlay d-flex justify-content-center align-items-center">
+                    <span className="overlay-text fs-8 text-white">
+                      {item.detail}
+                    </span>
+                  </div>
+                </div>
 
                 <Card.Body>
                   <Card.Title className="fw-bold fs-5">{item.title}</Card.Title>
